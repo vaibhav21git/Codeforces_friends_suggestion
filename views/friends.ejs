@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>friends</title>
+
+    <style>
+
+        .f1
+        {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: rgb(33, 33, 127);
+        }
+
+        .f11
+        {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 3px;
+        }
+
+        .but
+        {
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .list-group-item 
+        {
+            font-weight: 800;
+            color: rgb(29, 29, 109);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="f1">
+        <div class="f11">
+        <span class="material-icons">
+            people_alt
+            </span>
+    <h1>The suggested friends are :-</h1>
+</div>
+
+    <%- include('./styles/style.ejs') %>
+
+    <ul>
+        <%for( let i =0;i<fans.length;i++){%>
+           <li class = "list-group-item "><%=fans[i]%></li>
+        <% } %>
+    </ul>
+
+    <a class = "but" href = "home">HOME</a>
+</div>
+</body>
+</html>

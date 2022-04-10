@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DETAIL PAGE</title>
+
+    <style>
+         .info1
+         {
+             display: flex;
+             flex-direction: column;
+             justify-content: center;
+             align-items: center;
+             height : 100vh;
+             font-weight: 500;
+             color: rgb(50, 50, 152);
+             padding: 5px;
+         }
+ 
+         .i111
+         {
+             display: flex;
+             flex-direction: row;
+             align-items: center;
+         }
+
+         .i222
+         {
+             display: flex;
+             flex-direction: row;
+         }
+
+         .i333
+         {
+             display: flex;
+             flex-direction: row;
+         }
+
+        
+     
+    </style>
+</head>
+<body>
+    <%- include('./styles/style.ejs') %>
+    <% let result  = tt %>
+    <% let idname = user%>
+
+<%
+let username  = result[0].firstName;
+let userrating = result[0].rating;
+let userrank =  result[0].rank;
+%>
+
+<div class = "info1">
+
+<div class="info11">
+    <div class="i111">
+        <span class="material-icons">
+            account_box
+            </span>
+<h2>Your codeforces handle is <%=username%></h2>
+</div>
+<div class="i222">
+    <span class="material-icons">
+        leaderboard
+        </span>
+<h2>Your rating is <%=userrating%> </h2>
+</div>
+<div class="i333">
+    <span class="material-icons">
+        military_tech
+        </span>        
+<h3>Your rank  is <%=userrank%> </h3>
+</div>
+</div>
+
+
+<form  action = '/homef' method = "POST">
+    <div class="info12">
+        <div class="input-group mb-3">
+            <span class="input-group-text  material-icons" id="basic-addon1">   build</span>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1"name = "username" , value =<%=idname%> >
+          </div>
+    <button class = "btn btn-primary">FIND THE SUGGESTED weak topics</button>
+</div>
+</form>
+
+<div class="info13">
+<a href = "home"><h4>HOME</h4></a>
+</div>
+
+</div>
+</body>
+</html>
+
+
+  

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HOME</title>
+  <style>
+    .container {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .usser {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .usser >span {
+           padding:  3px;
+    }
+
+    .usser > label {
+           padding:  3px;
+    }
+
+    .usser > button {
+           padding:  6px;
+    }
+
+    .usser > input 
+    {
+      padding:  6px;
+    }
+
+    .card-body
+    {
+        color : rgb(30, 30, 134);
+        background-color: rgb(217, 217, 234);
+    }
+
+    .final > a
+    {
+       
+       font-size: large;
+       font-weight: 700;
+       color: rgb(40, 38, 72);
+      margin-top: 4px;
+    
+    }
+
+    .final{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <%- include('./styles/style.ejs') %>
+    <div class="container">
+
+      <div class="card" style="width: 50rem; height: 50rem;">
+        <img class="card-img-top" src="../views/styles/cf.jpg" alt="Card image cap">
+        <div class="card-body">
+          <h2 class="card-title">Please Type your Handle :-</h2>
+          <form action="/homep" method="POST">
+            <div class="usser">
+              <label for="username">
+                <h3>USERNAME</h3>
+              </label>
+              <span class="material-icons">account_circle</span>
+              <input type="text" id="username" name="username" placeholder="Enter the Username">
+              <button class="btn btn-primary">submit</button>
+            </div>
+          </form>
+          <div class="final">
+            <span class="material-icons">
+              accessibility_new
+              </span>
+             <a href = "home/all" >SHOW THE HELPED USERS</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>friend</title>
+
+    <style>
+         .w1
+         {
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             justify-content: center;
+             height: 100vh;
+             color: rgb(37, 37, 144);
+             font-size: 1.2rem;
+         }
+
+         .but
+         {
+             display: flex;
+             flex-direction: row;
+             align-items: center;
+             padding: 3px;
+         }
+
+         .but > span{
+             padding: 5px;;
+         }
+
+         .input-group 
+         {
+             display: flex;
+             flex-direction: row;
+             align-items: center;
+             justify-content: center;
+         }
+
+         .wt{
+            display: flex;
+             flex-direction: row;
+             align-items: center;
+             justify-content: center;
+         }
+
+        
+    </style>
+</head>
+<body>
+
+    <%- include('./styles/style.ejs') %>
+
+    <div class="w1">
+        <div class="wt">
+        <span class="material-icons">
+            view_list
+            </span>
+ <h1>The suggested weak topics are</h1>
+</div>
+
+ <ul class = "list-group">
+
+     <%for(let i =0;i<finalary.length;i++) {%>
+     
+         <li class = "list-group-item"><%=finalary[i]%></li>
+     <%}%>
+ </ul>
+
+ 
+    <form action = '/homeff' method  = "POST">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="material-icons">
+                    account_box
+                    </span>
+            </div>
+            <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" name  = "handle" , value = <%=user%>>
+          </div>
+          <div class="but">
+          <span class="material-icons">
+            people
+            </span>
+    <button class="btn btn-primary">FIND THE SUGGESTED FRIENDS</button>
+        </div>
+
+    </form>
+
+    
+    <a  href = "home">HOME</a>
+
+</div>
+</body>
+</html>
+
