@@ -1,1 +1,5 @@
-# Codeforces_friends_suggestion
+![](/images/home.png)
+![](/images/info.png)
+![](/images/weakt.png)
+![](/images/friends.png)
+![](/images/helped.png)
